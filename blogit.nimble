@@ -12,3 +12,5 @@ bin           = @["blogit"]
 
 requires "nim >= 1.6.12"
 requires "docopt >= 0.7.0"
+requires "yaml >= 1.1.0"
+requires "results >= 0.4.0"
