@@ -47,8 +47,7 @@ Missing ending separator!
 title: This is a valid field.
 date: 2022-05-26T18:04:45-03:00
 summary: This is a summary.
-draft: false
-tags: []
+bizcocho: This is not.
 ---
 """
     try:
