@@ -18,6 +18,7 @@ const welcome_message = """
 import docopt
 import strformat
 import os
+import results
 import logging
 import metadata
 
@@ -47,5 +48,9 @@ when isMainModule:
       error fmt"There was an error trying to open the file. Error: {e.msg}; exiting"
       quit -1
 
-    let metadata = parseMetadata(entireFile)
-    echo metadata
+    let metadataResult = parseMetadata(entireFile)
+    if metadataResult.isErr:
+      error metadataResult.error.message
+      quit -1
+
+    echo metadataResult.get
